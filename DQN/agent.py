@@ -33,9 +33,12 @@ class Agent:
 
         # common parameters
         self.action_num = self.env.get_action_num()
-        self.save_weight_interval = 50
         self.latest_record_num = 100
-        self.max_playing_time = 10
+        self.fps = 20
+        self.max_playing_time = 10 # minutes
+        self.print_info_interval = 1
+        self.save_weight_interval = 100
+        self.play_interval = 100
 
         # network
         self.memory = ReplayMemory(minibatch_size=self.minibatch_size, memory_size=self.memory_size, history_len=self.history_len)
@@ -92,7 +95,7 @@ class Agent:
         :param terminated_batch: batch of whether it is terminated
         :return: Huber loss
         """
-        with tf.GradientTape as tape:
+        with tf.GradientTape() as tape:
             next_state_q = self.target_network(next_state_batch)
             next_state_max_q = tf.reduce_max(next_state_q, axis=1)
             expected_q = reward_batch + self.discount_factor * next_state_max_q * (1.0 - tf.cast(terminated_batch, tf.float32))
@@ -129,8 +132,8 @@ class Agent:
             terminated = False
 
             while not terminated:
-                explr = self.get_explr(tf.constant(frames, tf.float32))
-                action = self.get_action(tf.constant(cur_state), tf.constant(explr, tf.float32))
+                explr = self.get_explr(tf.constant(frames, dtype=tf.float32))
+                action = self.get_action(tf.constant(cur_state, dtype=tf.float32), tf.constant(explr, dtype=tf.float32))
 
                 next_state, reward, terminated, _ = self.env.step(action)
                 episode_reward += reward
@@ -143,28 +146,30 @@ class Agent:
                         indices = self.memory.get_minibatch_indices()
                         state_batch, action_batch, reward_batch, next_state_batch, terminated_batch = self.memory.get_minibatch_sample(indices)
                         self.update_main_network(state_batch, action_batch, reward_batch, next_state_batch, terminated_batch)
-                    if frames % self.update_target_network == 0:
+                    if frames % self.target_network_update_frequency == 0:
                         self.update_target_network()
 
                 frames += 1
 
                 if terminated:
                     latest_scores.append(episode_reward)
-                    episode_reward += 1
+                    episode += 1
 
-                    if episode % self.save_weight_interval == 0:
-                        print("Episode: {}\t Latest {} average score: {}\t Progress: {} / {} ( {:.2f} % )"
+                    if episode % self.print_info_interval == 0:
+                        print("Episode: {}\t Latest {} average score: {:.3f}\t Progress: {} / {} ( {:.2f} % )"
                               .format(episode,
                                       self.latest_record_num, np.mean(latest_scores),
-                                      frames, self.training_frames, np.round(frames / self.training_frames, 3) * 100))
-                        print("Weight saving...", end="")
+                                      frames, self.training_frames, frames / self.training_frames * 100))
+                    if episode % self.save_weight_interval == 0:
+                        print("Weights saving...", end="")
                         self.main_network.save_weights(self.log_path + "/episode_{}".format(episode))
                         print("Done!")
+                    if episode % self.play_interval == 0:
                         self.play(self.log_path, 5)
 
     def play(self, save_path, trials):
-        loaded_ckpt = tf.train.latest_checkpoint(save_path)
-        self.main_network.load_weights(loaded_ckpt)
+        loaded_checkpoints = tf.train.latest_checkpoint(save_path)
+        self.main_network.load_weights(loaded_checkpoints)
 
         env = AtariEnvironment(self.env_id)
         reward_list = []
@@ -172,7 +177,7 @@ class Agent:
 
         for t in range(trials):
 
-            cur_state = self.env.reset()
+            cur_state = env.reset()
             frames = []
             episode_reward = 0
             terminated = False
@@ -185,14 +190,14 @@ class Agent:
                 episode_reward += reward
 
                 cur_state = next_state
-                if len(frames) > 20 * 60 * self.max_playing_time:  # To prevent falling infinite repeating sequences.
+                if len(frames) > self.fps * 60 * self.max_playing_time:  # To prevent falling infinite repeating sequences.
                     print("Playing takes {} minutes. Force termination.".format(self.max_playing_time))
                     break
 
             reward_list.append(episode_reward)
             frame_list.append(frames)
 
-        print("Score on {} trials: ".format(trials), reward_list)
+        print("Scores on {} trials: ".format(trials), reward_list)
         print("Highest score: ", np.max(reward_list))
         best_idx = int(np.argmax(reward_list))
-        imageio.mimsave(self.env_id + ".gif", frame_list[best_idx], fps=20)
+        imageio.mimsave(self.env_id + ".gif", frame_list[best_idx], fps=self.fps)

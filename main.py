@@ -15,11 +15,11 @@ def args_parse():
 if __name__ == "__main__":
     args = args_parse()
     agent = Agent(args.env)
-    print("Environment: ", args.env)
+    print("Environment:", args.env)
 
     if args.train:
-        print("-----Start training-----")
+        print("-----Start Training-----")
         agent.train()
     if args.play:
-        print("-----Start training-----")
+        print("-----Start Playing-----")
         agent.play(args.play, trials=1)

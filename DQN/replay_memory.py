@@ -43,7 +43,7 @@ class ReplayMemory:
         for idx in indices:
             item = self.memory[idx]
             state_batch.append(tf.constant(item.state, dtype=tf.float32))
-            action_batch.append(tf.constant(item.action, dtype=tf.float32))
+            action_batch.append(tf.constant(item.action, dtype=tf.int32))
             reward_batch.append(tf.constant(item.reward, dtype=tf.float32))
             next_state_batch.append(tf.constant(item.next_state, dtype=tf.float32))
             terminated_batch.append(tf.constant(item.terminated, dtype=tf.float32))
