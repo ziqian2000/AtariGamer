@@ -13,30 +13,34 @@ from common.atari_env import AtariEnvironment
 
 class Agent:
 
-    def __init__(self, env_id):
+    def __init__(self, env_id, is_local):
         # hyper-parameters
         self.discount_factor = 0.99
         self.minibatch_size = 32
         self.update_frequency = 4
-        self.target_network_update_frequency = 1000
+        self.target_network_update_frequency = 3000
         self.history_len = 4
-        self.memory_size = 10000
+        self.memory_size = 10000 if is_local else 50000
         self.init_explr = 1.0
         self.final_explr = 0.1
         self.final_explr_frame = 1000000
-        self.replay_start_size = 10000
+        self.replay_start_size = 50000
         self.training_frames = int(1e7)
+        self.learning_rate = 0.00025
+
+        # frames limit
+        self.fps = 20
+        self.max_playing_time = 10  # minutes
+        self.total_frames_limit = self.fps * 60 * self.max_playing_time
 
         # environment
         self.env_id = env_id
-        self.env = AtariEnvironment(self.env_id)
+        self.env = AtariEnvironment(self.env_id, self.total_frames_limit)
 
         # common parameters
         self.action_num = self.env.get_action_num()
         self.latest_record_num = 100
-        self.fps = 20
-        self.max_playing_time = 10 # minutes
-        self.print_info_interval = 1
+        self.print_info_interval = 10
         self.save_weight_interval = 100
         self.play_interval = 100
 
@@ -44,7 +48,7 @@ class Agent:
         self.memory = ReplayMemory(minibatch_size=self.minibatch_size, memory_size=self.memory_size, history_len=self.history_len)
         self.main_network = Network(action_num=self.action_num, history_len=self.history_len)
         self.target_network = Network(action_num=self.action_num, history_len=self.history_len)
-        self.optimizer = Adam(lr=1e-4, epsilon=1e-6)
+        self.optimizer = Adam(lr=self.learning_rate, epsilon=1e-6)
         self.loss = tf.keras.losses.Huber()
         self.loss_metric = tf.keras.metrics.Mean()
         self.q_metric = tf.keras.metrics.Mean()
@@ -167,11 +171,11 @@ class Agent:
                     if episode % self.play_interval == 0:
                         self.play(self.log_path, 5)
 
-    def play(self, save_path, trials):
-        loaded_checkpoints = tf.train.latest_checkpoint(save_path)
+    def play(self, load_path, trials):
+        loaded_checkpoints = tf.train.latest_checkpoint(load_path)
         self.main_network.load_weights(loaded_checkpoints)
 
-        env = AtariEnvironment(self.env_id)
+        env = AtariEnvironment(self.env_id, self.total_frames_limit)
         reward_list = []
         frame_list = []
 
@@ -190,14 +194,12 @@ class Agent:
                 episode_reward += reward
 
                 cur_state = next_state
-                if len(frames) > self.fps * 60 * self.max_playing_time:  # To prevent falling infinite repeating sequences.
-                    print("Playing takes {} minutes. Force termination.".format(self.max_playing_time))
-                    break
 
             reward_list.append(episode_reward)
             frame_list.append(frames)
 
         print("Scores on {} trials: ".format(trials), reward_list)
         print("Highest score: ", np.max(reward_list))
+        print("Average score: ", np.mean(reward_list))
         best_idx = int(np.argmax(reward_list))
         imageio.mimsave(self.env_id + ".gif", frame_list[best_idx], fps=self.fps)
