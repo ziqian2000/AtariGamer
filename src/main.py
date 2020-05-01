@@ -1,6 +1,6 @@
 import argparse
 
-from DQN.agent import Agent
+from src.DQN import Agent
 
 
 def args_parse():
@@ -8,14 +8,14 @@ def args_parse():
     parser.add_argument("--env", help="\"NoFrameskip\" environment supported only.")
     parser.add_argument("--train", action="store_true", help="Train on a given environment.")
     parser.add_argument("--play", help="Play on a given environment. Followed by save path.")
-    parser.add_argument("--local", action="store_true", help="The memory will be set small if running locally.")
+    parser.add_argument("--debug", action="store_true", help="Some parameters will be very small.")
     args = parser.parse_args()
     return args
 
 
 if __name__ == "__main__":
     args = args_parse()
-    agent = Agent(args.env, args.local)
+    agent = Agent(args.env, args.debug)
     print("Environment:", args.env)
 
     if args.train:

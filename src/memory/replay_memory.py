@@ -3,7 +3,7 @@ from collections import namedtuple
 import numpy as np
 import tensorflow as tf
 
-Item = namedtuple("Item", ('state', 'action', 'reward', 'next_state', 'terminated'))
+Transition = namedtuple("transition", ('state', 'action', 'reward', 'next_state', 'terminated'))
 
 
 class ReplayMemory:
@@ -17,11 +17,19 @@ class ReplayMemory:
         self.index = 0
         self.is_full = False
 
+        # state and next_state will use uint8 (8 bit = 1 Byte)
+        # action uses int32 (32 bit = 4 Byte)
+        # reward uses float32 (32 bit = 4 Byte)
+        # terminal uses boolean (8 bit = 1 Byte (numpy))
+        total_est_mem = self.memory_size * (84 * 84 * 4 * 2 + 4 + 4 + 1) / 1024.0 ** 3
+        print("- Estimated memory usage for replay memory: {:.4f} GB.".format(total_est_mem))
+
     def push(self, state, action, reward, next_state, terminated):
-        item = Item(state, action, reward, next_state, terminated)
+        transition = Transition(state, action, reward, next_state, terminated)
         if not self.is_full and self.index + 1 == self.memory_size:
             self.is_full = True
-        self.memory[self.index] = item
+            print("- Replay memory is full.")
+        self.memory[self.index] = transition
         self.index = (self.index + 1) % self.memory_size
 
     def get_minibatch_indices(self):
@@ -41,12 +49,12 @@ class ReplayMemory:
         next_state_batch = []
         terminated_batch = []
         for idx in indices:
-            item = self.memory[idx]
-            state_batch.append(tf.constant(item.state, dtype=tf.float32))
-            action_batch.append(tf.constant(item.action, dtype=tf.int32))
-            reward_batch.append(tf.constant(item.reward, dtype=tf.float32))
-            next_state_batch.append(tf.constant(item.next_state, dtype=tf.float32))
-            terminated_batch.append(tf.constant(item.terminated, dtype=tf.float32))
+            transition = self.memory[idx]
+            state_batch.append(tf.constant(transition.state, dtype=tf.uint8))
+            action_batch.append(tf.constant(transition.action, dtype=tf.int32))
+            reward_batch.append(tf.constant(transition.reward, dtype=tf.float32))
+            next_state_batch.append(tf.constant(transition.next_state, dtype=tf.uint8))
+            terminated_batch.append(tf.constant(transition.terminated, dtype=tf.float32))
         return tf.stack(state_batch), \
                tf.stack(action_batch), \
                tf.stack(reward_batch), \

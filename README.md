@@ -4,7 +4,7 @@
 
 Unsupported for life game.
 
-NoFrameskip environment only.
+*NoFrameskip* environment only.
 
 ## Achievement
 

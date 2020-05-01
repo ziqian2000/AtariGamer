@@ -7,7 +7,7 @@ class Network(Model):
 
     def __init__(self, action_num, history_len):
         super(Network, self).__init__()
-        self.normalize = Lambda(lambda x: x / 255.0)
+        self.normalize = Lambda(lambda x: tf.cast(x, dtype=tf.float32) / 255.0)
         self.conv1 = Conv2D(name="conv1", filters=32, kernel_size=(8, 8), strides=(4, 4), kernel_initializer=tf.keras.initializers.VarianceScaling(scale=2.0), activation="relu", input_shape=(None, 84, 84, history_len))
         self.conv2 = Conv2D(name="conv2", filters=64, kernel_size=(4, 4), strides=(2, 2), kernel_initializer=tf.keras.initializers.VarianceScaling(scale=2.0), activation="relu")
         self.conv3 = Conv2D(name="conv3", filters=64, kernel_size=(3, 3), strides=(1, 1), kernel_initializer=tf.keras.initializers.VarianceScaling(scale=2.0), activation="relu")

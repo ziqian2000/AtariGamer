@@ -1,11 +1,10 @@
-import numpy as np
 import tensorflow as tf
 
-from common.wrappers import make_atari, wrap_deepmind, wrap_pytorch
+from src.common import make_atari, wrap_deepmind, wrap_pytorch
 
 
 def process(state):
-    return tf.cast(tf.transpose(state, [1, 2, 0]), dtype=np.float32)
+    return tf.transpose(state, [1, 2, 0])
 
 
 class AtariEnvironment:
