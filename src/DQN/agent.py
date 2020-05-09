@@ -31,6 +31,7 @@ class Agent:
         self.training_frames = int(1e7)
         self.learning_rate = 0.00025
         self.momentum = 0.95
+        self.frameSkip = 4
 
         # frames limit
         self.fps = 30
@@ -62,6 +63,8 @@ class Agent:
 
         # other tools (log, summary)
         self.log_path = ("drive/My Drive/AtariGamer/" if not debug else "./") + "log/" + datetime.now().strftime("%Y%m%d_%H%M%S") + "_" + self.env_id
+
+        print("DDQN:" + ("YES" if self.use_DDQN else "NO"))
 
     @tf.function
     def get_action(self, state, exploration_rate):
@@ -186,10 +189,16 @@ class Agent:
             cur_state = self.env.reset()
             episode_reward = 0
             terminated = False
+            last_action = 0
 
             while not terminated:
-                explr = self.get_explr(tf.constant(frames, dtype=tf.float32))
-                action = self.get_action(tf.constant(cur_state, dtype=tf.uint8), tf.constant(explr, dtype=tf.float32))
+
+                if frames % self.frameSkip == 0:
+                    action = last_action
+                else:
+                    explr = self.get_explr(tf.constant(frames, dtype=tf.float32))
+                    action = self.get_action(tf.constant(cur_state, dtype=tf.uint8), tf.constant(explr, dtype=tf.float32))
+                    last_action = action
 
                 next_state, reward, terminated, _ = self.env.step(action)
                 episode_reward += reward
