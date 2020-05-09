@@ -18,6 +18,8 @@ def par(v): return (v - 1) >> 1
 class SumTree:
 
     def __init__(self, capacity):
+        if capacity % 2 != 0:
+            capacity -= 1
         assert capacity % 2 == 0  # claim a full binary tree for convenience
         self.capacity = capacity
         self.sum = np.zeros(self.capacity * 2 - 1, dtype=np.float32)
@@ -29,17 +31,16 @@ class SumTree:
         self.push_up(self.idx + self.capacity - 1, p)
         self.idx = (self.idx + 1) % self.capacity
 
-    def push_up(self, pos, new_p):
+    def push_up(self, idx, new_p):
         """
         push up
-        :param pos: index in tree, must be a leaf, (capacity - 1) ~ (capacity * 2 - 2)
+        :param idx: index in tree, must be a leaf, (capacity - 1) ~ (capacity * 2 - 2)
         :param new_p: new abs error
         """
-        delta = new_p - self.sum[pos]
-        self.sum[pos] += delta
-        while pos > 0:
-            pos = par(pos)
-            self.sum[pos] += delta
+        self.sum[idx] += new_p - self.sum[idx]
+        while idx > 0:
+            idx = par(idx)
+            self.sum[idx] = self.sum[ls(idx)] + self.sum[rs(idx)]
 
     def is_leaf(self, v):
         return ls(v) >= self.capacity * 2 - 1

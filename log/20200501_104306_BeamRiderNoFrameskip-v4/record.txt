@@ -1,0 +1,625 @@
+2020-05-01 10:43:01.977927: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+- Estimated memory usage for replay memory: 6.8363 GB.
+2020-05-01 10:43:05.436946: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-05-01 10:43:05.460990: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:05.461574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:00:04.0 name: Tesla P4 computeCapability: 6.1
+coreClock: 1.1135GHz coreCount: 20 deviceMemorySize: 7.43GiB deviceMemoryBandwidth: 178.99GiB/s
+2020-05-01 10:43:05.461615: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-05-01 10:43:05.463411: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-05-01 10:43:05.465081: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-05-01 10:43:05.465431: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-05-01 10:43:05.467339: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-05-01 10:43:05.468465: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-05-01 10:43:05.472407: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-05-01 10:43:05.472529: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:05.473126: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:05.473698: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-05-01 10:43:05.473971: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX512F
+2020-05-01 10:43:05.479101: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2000129999 Hz
+2020-05-01 10:43:05.479273: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x30b0d80 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-05-01 10:43:05.479300: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-05-01 10:43:05.567759: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:05.568305: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x30b0f40 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-05-01 10:43:05.568344: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla P4, Compute Capability 6.1
+2020-05-01 10:43:05.568622: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:05.568986: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:00:04.0 name: Tesla P4 computeCapability: 6.1
+coreClock: 1.1135GHz coreCount: 20 deviceMemorySize: 7.43GiB deviceMemoryBandwidth: 178.99GiB/s
+2020-05-01 10:43:05.569027: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-05-01 10:43:05.569071: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-05-01 10:43:05.569102: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-05-01 10:43:05.569140: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-05-01 10:43:05.569159: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-05-01 10:43:05.569177: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-05-01 10:43:05.569197: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-05-01 10:43:05.569269: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:05.569672: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:05.569988: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-05-01 10:43:05.570033: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-05-01 10:43:06.064392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-01 10:43:06.064451: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2020-05-01 10:43:06.064464: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2020-05-01 10:43:06.064724: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:06.065155: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-01 10:43:06.065492: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:39] Overriding allow_growth setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2020-05-01 10:43:06.065557: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6966 MB memory) -> physical GPU (device: 0, name: Tesla P4, pci bus id: 0000:00:04.0, compute capability: 6.1)
+Environment: BeamRiderNoFrameskip-v4
+-----Start Training-----
+2020-05-01 10:43:06.561591: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+Episode: 10	 Latest 100 average score: 3.40	 Progress: 4177 / 10000000 ( 0.04 % )
+Episode: 20	 Latest 100 average score: 2.95	 Progress: 8761 / 10000000 ( 0.09 % )
+Episode: 30	 Latest 100 average score: 3.10	 Progress: 13529 / 10000000 ( 0.14 % )
+Episode: 40	 Latest 100 average score: 3.00	 Progress: 17794 / 10000000 ( 0.18 % )
+Episode: 50	 Latest 100 average score: 2.70	 Progress: 21094 / 10000000 ( 0.21 % )
+Episode: 60	 Latest 100 average score: 2.70	 Progress: 25008 / 10000000 ( 0.25 % )
+Episode: 70	 Latest 100 average score: 2.74	 Progress: 29673 / 10000000 ( 0.30 % )
+Episode: 80	 Latest 100 average score: 2.65	 Progress: 33477 / 10000000 ( 0.33 % )
+Episode: 90	 Latest 100 average score: 2.67	 Progress: 38277 / 10000000 ( 0.38 % )
+Episode: 100	 Latest 100 average score: 2.65	 Progress: 42051 / 10000000 ( 0.42 % )
+Weights saving...Done!
+2020-05-01 10:45:22.066248: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+Scores on 5 trials:  [11.0, 0.0, 3.0, 4.0, 0.0]
+Highest score:  11.0
+Average score:  3.6
+Episode: 110	 Latest 100 average score: 2.70	 Progress: 47143 / 10000000 ( 0.47 % )
+Episode: 120	 Latest 100 average score: 2.74	 Progress: 51759 / 10000000 ( 0.52 % )
+Episode: 130	 Latest 100 average score: 2.82	 Progress: 57697 / 10000000 ( 0.58 % )
+Episode: 140	 Latest 100 average score: 2.87	 Progress: 62795 / 10000000 ( 0.63 % )
+Episode: 150	 Latest 100 average score: 3.06	 Progress: 67564 / 10000000 ( 0.68 % )
+Episode: 160	 Latest 100 average score: 3.01	 Progress: 71201 / 10000000 ( 0.71 % )
+Episode: 170	 Latest 100 average score: 3.00	 Progress: 74822 / 10000000 ( 0.75 % )
+Episode: 180	 Latest 100 average score: 3.02	 Progress: 78495 / 10000000 ( 0.78 % )
+Episode: 190	 Latest 100 average score: 2.94	 Progress: 81977 / 10000000 ( 0.82 % )
+Episode: 200	 Latest 100 average score: 2.96	 Progress: 85727 / 10000000 ( 0.86 % )
+Weights saving...Done!
+Scores on 5 trials:  [6.0, 3.0, 0.0, 11.0, 1.0]
+Highest score:  11.0
+Average score:  4.2
+Episode: 210	 Latest 100 average score: 2.91	 Progress: 90844 / 10000000 ( 0.91 % )
+Episode: 220	 Latest 100 average score: 2.91	 Progress: 95103 / 10000000 ( 0.95 % )
+Episode: 230	 Latest 100 average score: 2.77	 Progress: 100013 / 10000000 ( 1.00 % )
+Episode: 240	 Latest 100 average score: 2.81	 Progress: 105196 / 10000000 ( 1.05 % )
+Episode: 250	 Latest 100 average score: 2.82	 Progress: 109458 / 10000000 ( 1.09 % )
+Episode: 260	 Latest 100 average score: 2.82	 Progress: 113911 / 10000000 ( 1.14 % )
+Episode: 270	 Latest 100 average score: 2.71	 Progress: 118173 / 10000000 ( 1.18 % )
+Episode: 280	 Latest 100 average score: 2.74	 Progress: 122000 / 10000000 ( 1.22 % )
+Episode: 290	 Latest 100 average score: 2.85	 Progress: 126791 / 10000000 ( 1.27 % )
+- Replay memory is full.
+Episode: 300	 Latest 100 average score: 2.83	 Progress: 131619 / 10000000 ( 1.32 % )
+Weights saving...Done!
+Scores on 5 trials:  [2.0, 0.0, 3.0, 4.0, 11.0]
+Highest score:  11.0
+Average score:  4.0
+Episode: 310	 Latest 100 average score: 2.80	 Progress: 136822 / 10000000 ( 1.37 % )
+Episode: 320	 Latest 100 average score: 2.83	 Progress: 141407 / 10000000 ( 1.41 % )
+Episode: 330	 Latest 100 average score: 2.81	 Progress: 145278 / 10000000 ( 1.45 % )
+Episode: 340	 Latest 100 average score: 2.79	 Progress: 149781 / 10000000 ( 1.50 % )
+Episode: 350	 Latest 100 average score: 2.65	 Progress: 154231 / 10000000 ( 1.54 % )
+Episode: 360	 Latest 100 average score: 2.69	 Progress: 158783 / 10000000 ( 1.59 % )
+Episode: 370	 Latest 100 average score: 2.73	 Progress: 162812 / 10000000 ( 1.63 % )
+Episode: 380	 Latest 100 average score: 2.79	 Progress: 168007 / 10000000 ( 1.68 % )
+Episode: 390	 Latest 100 average score: 2.73	 Progress: 171928 / 10000000 ( 1.72 % )
+Episode: 400	 Latest 100 average score: 2.81	 Progress: 176191 / 10000000 ( 1.76 % )
+Weights saving...Done!
+Scores on 5 trials:  [4.0, 0.0, 7.0, 13.0, 2.0]
+Highest score:  13.0
+Average score:  5.2
+Episode: 410	 Latest 100 average score: 2.82	 Progress: 180839 / 10000000 ( 1.81 % )
+Episode: 420	 Latest 100 average score: 2.78	 Progress: 185191 / 10000000 ( 1.85 % )
+Episode: 430	 Latest 100 average score: 2.83	 Progress: 189723 / 10000000 ( 1.90 % )
+Episode: 440	 Latest 100 average score: 2.82	 Progress: 194174 / 10000000 ( 1.94 % )
+Episode: 450	 Latest 100 average score: 2.87	 Progress: 198368 / 10000000 ( 1.98 % )
+Episode: 460	 Latest 100 average score: 2.93	 Progress: 202745 / 10000000 ( 2.03 % )
+Episode: 470	 Latest 100 average score: 3.09	 Progress: 207404 / 10000000 ( 2.07 % )
+Episode: 480	 Latest 100 average score: 3.06	 Progress: 211435 / 10000000 ( 2.11 % )
+Episode: 490	 Latest 100 average score: 3.01	 Progress: 215283 / 10000000 ( 2.15 % )
+Episode: 500	 Latest 100 average score: 2.88	 Progress: 219045 / 10000000 ( 2.19 % )
+Weights saving...Done!
+Scores on 5 trials:  [15.0, 11.0, 4.0, 5.0, 10.0]
+Highest score:  15.0
+Average score:  9.0
+Episode: 510	 Latest 100 average score: 2.83	 Progress: 223921 / 10000000 ( 2.24 % )
+Episode: 520	 Latest 100 average score: 2.91	 Progress: 228627 / 10000000 ( 2.29 % )
+Episode: 530	 Latest 100 average score: 2.98	 Progress: 233428 / 10000000 ( 2.33 % )
+Episode: 540	 Latest 100 average score: 2.94	 Progress: 237456 / 10000000 ( 2.37 % )
+Episode: 550	 Latest 100 average score: 3.05	 Progress: 242673 / 10000000 ( 2.43 % )
+Episode: 560	 Latest 100 average score: 2.97	 Progress: 246402 / 10000000 ( 2.46 % )
+Episode: 570	 Latest 100 average score: 2.92	 Progress: 250565 / 10000000 ( 2.51 % )
+Episode: 580	 Latest 100 average score: 2.98	 Progress: 255170 / 10000000 ( 2.55 % )
+Episode: 590	 Latest 100 average score: 3.17	 Progress: 259332 / 10000000 ( 2.59 % )
+Episode: 600	 Latest 100 average score: 3.28	 Progress: 264277 / 10000000 ( 2.64 % )
+Weights saving...Done!
+Scores on 5 trials:  [5.0, 9.0, 1.0, 6.0, 8.0]
+Highest score:  9.0
+Average score:  5.8
+Episode: 610	 Latest 100 average score: 3.49	 Progress: 270041 / 10000000 ( 2.70 % )
+Episode: 620	 Latest 100 average score: 3.60	 Progress: 275935 / 10000000 ( 2.76 % )
+Episode: 630	 Latest 100 average score: 3.58	 Progress: 280580 / 10000000 ( 2.81 % )
+Episode: 640	 Latest 100 average score: 3.60	 Progress: 285129 / 10000000 ( 2.85 % )
+Episode: 650	 Latest 100 average score: 3.53	 Progress: 289803 / 10000000 ( 2.90 % )
+Episode: 660	 Latest 100 average score: 3.71	 Progress: 295475 / 10000000 ( 2.95 % )
+Episode: 670	 Latest 100 average score: 3.76	 Progress: 301345 / 10000000 ( 3.01 % )
+Episode: 680	 Latest 100 average score: 3.85	 Progress: 306564 / 10000000 ( 3.07 % )
+Episode: 690	 Latest 100 average score: 3.82	 Progress: 311200 / 10000000 ( 3.11 % )
+Episode: 700	 Latest 100 average score: 3.95	 Progress: 316536 / 10000000 ( 3.17 % )
+Weights saving...Done!
+Scores on 5 trials:  [15.0, 15.0, 41.0, 19.0, 11.0]
+Highest score:  41.0
+Average score:  20.2
+Episode: 710	 Latest 100 average score: 3.93	 Progress: 321980 / 10000000 ( 3.22 % )
+Episode: 720	 Latest 100 average score: 3.71	 Progress: 326055 / 10000000 ( 3.26 % )
+Episode: 730	 Latest 100 average score: 3.73	 Progress: 331220 / 10000000 ( 3.31 % )
+Episode: 740	 Latest 100 average score: 3.82	 Progress: 336739 / 10000000 ( 3.37 % )
+Episode: 750	 Latest 100 average score: 3.89	 Progress: 341558 / 10000000 ( 3.42 % )
+Episode: 760	 Latest 100 average score: 3.98	 Progress: 347743 / 10000000 ( 3.48 % )
+Episode: 770	 Latest 100 average score: 3.86	 Progress: 351210 / 10000000 ( 3.51 % )
+Episode: 780	 Latest 100 average score: 3.75	 Progress: 354846 / 10000000 ( 3.55 % )
+Episode: 790	 Latest 100 average score: 3.82	 Progress: 359807 / 10000000 ( 3.60 % )
+Episode: 800	 Latest 100 average score: 3.77	 Progress: 364437 / 10000000 ( 3.64 % )
+Weights saving...Done!
+Scores on 5 trials:  [15.0, 15.0, 6.0, 15.0, 10.0]
+Highest score:  15.0
+Average score:  12.2
+Episode: 810	 Latest 100 average score: 3.70	 Progress: 369927 / 10000000 ( 3.70 % )
+Episode: 820	 Latest 100 average score: 3.87	 Progress: 375809 / 10000000 ( 3.76 % )
+Episode: 830	 Latest 100 average score: 3.95	 Progress: 380754 / 10000000 ( 3.81 % )
+Episode: 840	 Latest 100 average score: 3.92	 Progress: 385399 / 10000000 ( 3.85 % )
+Episode: 850	 Latest 100 average score: 4.32	 Progress: 392797 / 10000000 ( 3.93 % )
+Episode: 860	 Latest 100 average score: 4.19	 Progress: 397949 / 10000000 ( 3.98 % )
+Episode: 870	 Latest 100 average score: 4.44	 Progress: 403409 / 10000000 ( 4.03 % )
+Episode: 880	 Latest 100 average score: 4.53	 Progress: 408789 / 10000000 ( 4.09 % )
+Episode: 890	 Latest 100 average score: 4.50	 Progress: 413141 / 10000000 ( 4.13 % )
+Episode: 900	 Latest 100 average score: 4.52	 Progress: 418284 / 10000000 ( 4.18 % )
+Weights saving...Done!
+Scores on 5 trials:  [8.0, 4.0, 3.0, 3.0, 3.0]
+Highest score:  8.0
+Average score:  4.2
+Episode: 910	 Latest 100 average score: 4.47	 Progress: 422993 / 10000000 ( 4.23 % )
+Episode: 920	 Latest 100 average score: 4.38	 Progress: 427237 / 10000000 ( 4.27 % )
+Episode: 930	 Latest 100 average score: 4.32	 Progress: 431555 / 10000000 ( 4.32 % )
+Episode: 940	 Latest 100 average score: 4.34	 Progress: 436197 / 10000000 ( 4.36 % )
+Episode: 950	 Latest 100 average score: 4.10	 Progress: 442509 / 10000000 ( 4.43 % )
+Episode: 960	 Latest 100 average score: 4.14	 Progress: 447403 / 10000000 ( 4.47 % )
+Episode: 970	 Latest 100 average score: 4.06	 Progress: 452413 / 10000000 ( 4.52 % )
+Episode: 980	 Latest 100 average score: 4.03	 Progress: 457020 / 10000000 ( 4.57 % )
+Episode: 990	 Latest 100 average score: 4.02	 Progress: 461475 / 10000000 ( 4.61 % )
+Episode: 1000	 Latest 100 average score: 4.00	 Progress: 466605 / 10000000 ( 4.67 % )
+Weights saving...Done!
+Scores on 5 trials:  [45.0, 3.0, 9.0, 6.0, 24.0]
+Highest score:  45.0
+Average score:  17.4
+Episode: 1010	 Latest 100 average score: 4.13	 Progress: 471984 / 10000000 ( 4.72 % )
+Episode: 1020	 Latest 100 average score: 4.21	 Progress: 477284 / 10000000 ( 4.77 % )
+Episode: 1030	 Latest 100 average score: 4.06	 Progress: 481230 / 10000000 ( 4.81 % )
+Episode: 1040	 Latest 100 average score: 4.02	 Progress: 485264 / 10000000 ( 4.85 % )
+Episode: 1050	 Latest 100 average score: 3.86	 Progress: 490019 / 10000000 ( 4.90 % )
+Episode: 1060	 Latest 100 average score: 3.88	 Progress: 494964 / 10000000 ( 4.95 % )
+Episode: 1070	 Latest 100 average score: 3.87	 Progress: 500184 / 10000000 ( 5.00 % )
+Episode: 1080	 Latest 100 average score: 3.94	 Progress: 506438 / 10000000 ( 5.06 % )
+Episode: 1090	 Latest 100 average score: 3.90	 Progress: 510563 / 10000000 ( 5.11 % )
+Episode: 1100	 Latest 100 average score: 3.85	 Progress: 514971 / 10000000 ( 5.15 % )
+Weights saving...Done!
+Killed. Scores on 5 trials:  [30.0, 43.0, 2.0, 2.0, 8.0]
+Highest score:  43.0
+Average score:  17.0
+Episode: 1110	 Latest 100 average score: 3.94	 Progress: 521566 / 10000000 ( 5.22 % )
+Episode: 1120	 Latest 100 average score: 4.02	 Progress: 526829 / 10000000 ( 5.27 % )
+Episode: 1130	 Latest 100 average score: 4.28	 Progress: 532878 / 10000000 ( 5.33 % )
+Episode: 1140	 Latest 100 average score: 4.55	 Progress: 539243 / 10000000 ( 5.39 % )
+Episode: 1150	 Latest 100 average score: 4.62	 Progress: 543476 / 10000000 ( 5.43 % )
+Episode: 1160	 Latest 100 average score: 4.58	 Progress: 548620 / 10000000 ( 5.49 % )
+Episode: 1170	 Latest 100 average score: 4.82	 Progress: 556376 / 10000000 ( 5.56 % )
+Episode: 1180	 Latest 100 average score: 4.88	 Progress: 562461 / 10000000 ( 5.62 % )
+Episode: 1190	 Latest 100 average score: 5.40	 Progress: 571626 / 10000000 ( 5.72 % )
+Episode: 1200	 Latest 100 average score: 5.68	 Progress: 577936 / 10000000 ( 5.78 % )
+Weights saving...Done!
+Scores on 5 trials:  [31.0, 26.0, 13.0, 15.0, 5.0]
+Highest score:  31.0
+Average score:  18.0
+Episode: 1210	 Latest 100 average score: 5.51	 Progress: 582748 / 10000000 ( 5.83 % )
+Episode: 1220	 Latest 100 average score: 5.62	 Progress: 589068 / 10000000 ( 5.89 % )
+Episode: 1230	 Latest 100 average score: 5.63	 Progress: 594271 / 10000000 ( 5.94 % )
+Episode: 1240	 Latest 100 average score: 5.65	 Progress: 601329 / 10000000 ( 6.01 % )
+Episode: 1250	 Latest 100 average score: 5.68	 Progress: 606402 / 10000000 ( 6.06 % )
+Episode: 1260	 Latest 100 average score: 5.75	 Progress: 611861 / 10000000 ( 6.12 % )
+Episode: 1270	 Latest 100 average score: 5.47	 Progress: 616510 / 10000000 ( 6.17 % )
+Episode: 1280	 Latest 100 average score: 5.55	 Progress: 622221 / 10000000 ( 6.22 % )
+Episode: 1290	 Latest 100 average score: 5.29	 Progress: 628304 / 10000000 ( 6.28 % )
+Episode: 1300	 Latest 100 average score: 5.15	 Progress: 633890 / 10000000 ( 6.34 % )
+Weights saving...Done!
+Killed. Scores on 5 trials:  [6.0, 9.0, 15.0, 9.0, 15.0]
+Highest score:  15.0
+Average score:  10.8
+Episode: 1310	 Latest 100 average score: 5.34	 Progress: 640374 / 10000000 ( 6.40 % )
+Episode: 1320	 Latest 100 average score: 5.35	 Progress: 646186 / 10000000 ( 6.46 % )
+Episode: 1330	 Latest 100 average score: 5.40	 Progress: 653226 / 10000000 ( 6.53 % )
+Episode: 1340	 Latest 100 average score: 5.34	 Progress: 660641 / 10000000 ( 6.61 % )
+Episode: 1350	 Latest 100 average score: 5.37	 Progress: 666661 / 10000000 ( 6.67 % )
+Episode: 1360	 Latest 100 average score: 5.37	 Progress: 672926 / 10000000 ( 6.73 % )
+Episode: 1370	 Latest 100 average score: 5.29	 Progress: 677781 / 10000000 ( 6.78 % )
+Episode: 1380	 Latest 100 average score: 5.15	 Progress: 683210 / 10000000 ( 6.83 % )
+Episode: 1390	 Latest 100 average score: 5.19	 Progress: 689195 / 10000000 ( 6.89 % )
+Episode: 1400	 Latest 100 average score: 5.22	 Progress: 694669 / 10000000 ( 6.95 % )
+Weights saving...Done!
+Scores on 5 trials:  [16.0, 5.0, 0.0, 14.0, 23.0]
+Highest score:  23.0
+Average score:  11.6
+Episode: 1410	 Latest 100 average score: 5.30	 Progress: 702016 / 10000000 ( 7.02 % )
+Episode: 1420	 Latest 100 average score: 5.20	 Progress: 707968 / 10000000 ( 7.08 % )
+Episode: 1430	 Latest 100 average score: 5.22	 Progress: 713632 / 10000000 ( 7.14 % )
+Episode: 1440	 Latest 100 average score: 5.53	 Progress: 721898 / 10000000 ( 7.22 % )
+Episode: 1450	 Latest 100 average score: 5.52	 Progress: 727548 / 10000000 ( 7.28 % )
+Episode: 1460	 Latest 100 average score: 5.86	 Progress: 735530 / 10000000 ( 7.36 % )
+Episode: 1470	 Latest 100 average score: 6.34	 Progress: 742109 / 10000000 ( 7.42 % )
+Episode: 1480	 Latest 100 average score: 6.36	 Progress: 746908 / 10000000 ( 7.47 % )
+Episode: 1490	 Latest 100 average score: 6.25	 Progress: 753582 / 10000000 ( 7.54 % )
+Episode: 1500	 Latest 100 average score: 6.44	 Progress: 761091 / 10000000 ( 7.61 % )
+Weights saving...Done!
+Scores on 5 trials:  [14.0, 1.0, 15.0, 30.0, 15.0]
+Highest score:  30.0
+Average score:  15.0
+Episode: 1510	 Latest 100 average score: 6.60	 Progress: 768872 / 10000000 ( 7.69 % )
+Episode: 1520	 Latest 100 average score: 6.76	 Progress: 775071 / 10000000 ( 7.75 % )
+Episode: 1530	 Latest 100 average score: 7.13	 Progress: 783275 / 10000000 ( 7.83 % )
+Episode: 1540	 Latest 100 average score: 6.86	 Progress: 789941 / 10000000 ( 7.90 % )
+Episode: 1550	 Latest 100 average score: 7.14	 Progress: 798279 / 10000000 ( 7.98 % )
+Episode: 1560	 Latest 100 average score: 6.99	 Progress: 805237 / 10000000 ( 8.05 % )
+Episode: 1570	 Latest 100 average score: 7.04	 Progress: 812103 / 10000000 ( 8.12 % )
+Episode: 1580	 Latest 100 average score: 7.60	 Progress: 822177 / 10000000 ( 8.22 % )
+Episode: 1590	 Latest 100 average score: 7.69	 Progress: 829506 / 10000000 ( 8.30 % )
+Episode: 1600	 Latest 100 average score: 7.66	 Progress: 835633 / 10000000 ( 8.36 % )
+Weights saving...Done!
+Scores on 5 trials:  [15.0, 15.0, 7.0, 15.0, 6.0]
+Highest score:  15.0
+Average score:  11.6
+Episode: 1610	 Latest 100 average score: 7.78	 Progress: 844574 / 10000000 ( 8.45 % )
+Episode: 1620	 Latest 100 average score: 7.91	 Progress: 852883 / 10000000 ( 8.53 % )
+Episode: 1630	 Latest 100 average score: 7.87	 Progress: 860836 / 10000000 ( 8.61 % )
+Episode: 1640	 Latest 100 average score: 8.05	 Progress: 867830 / 10000000 ( 8.68 % )
+Episode: 1650	 Latest 100 average score: 7.98	 Progress: 875950 / 10000000 ( 8.76 % )
+Episode: 1660	 Latest 100 average score: 8.34	 Progress: 887017 / 10000000 ( 8.87 % )
+Episode: 1670	 Latest 100 average score: 8.74	 Progress: 897188 / 10000000 ( 8.97 % )
+Episode: 1680	 Latest 100 average score: 8.87	 Progress: 908610 / 10000000 ( 9.09 % )
+Episode: 1690	 Latest 100 average score: 9.22	 Progress: 917117 / 10000000 ( 9.17 % )
+Episode: 1700	 Latest 100 average score: 9.14	 Progress: 924347 / 10000000 ( 9.24 % )
+Weights saving...Done!
+Scores on 5 trials:  [12.0, 3.0, 2.0, 42.0, 27.0]
+Highest score:  42.0
+Average score:  17.2
+Episode: 1710	 Latest 100 average score: 9.00	 Progress: 933342 / 10000000 ( 9.33 % )
+Episode: 1720	 Latest 100 average score: 9.76	 Progress: 947798 / 10000000 ( 9.48 % )
+Episode: 1730	 Latest 100 average score: 9.85	 Progress: 958477 / 10000000 ( 9.58 % )
+Episode: 1740	 Latest 100 average score: 10.16	 Progress: 966953 / 10000000 ( 9.67 % )
+Episode: 1750	 Latest 100 average score: 11.17	 Progress: 979807 / 10000000 ( 9.80 % )
+Episode: 1760	 Latest 100 average score: 11.26	 Progress: 988650 / 10000000 ( 9.89 % )
+Episode: 1770	 Latest 100 average score: 11.61	 Progress: 1002881 / 10000000 ( 10.03 % )
+Episode: 1780	 Latest 100 average score: 11.64	 Progress: 1012456 / 10000000 ( 10.12 % )
+Episode: 1790	 Latest 100 average score: 12.52	 Progress: 1026185 / 10000000 ( 10.26 % )
+Episode: 1800	 Latest 100 average score: 13.47	 Progress: 1037791 / 10000000 ( 10.38 % )
+Weights saving...Done!
+Scores on 5 trials:  [48.0, 14.0, 5.0, 7.0, 14.0]
+Highest score:  48.0
+Average score:  17.6
+Episode: 1810	 Latest 100 average score: 13.70	 Progress: 1046269 / 10000000 ( 10.46 % )
+Episode: 1820	 Latest 100 average score: 13.33	 Progress: 1056232 / 10000000 ( 10.56 % )
+Episode: 1830	 Latest 100 average score: 14.14	 Progress: 1071558 / 10000000 ( 10.72 % )
+Episode: 1840	 Latest 100 average score: 14.22	 Progress: 1081030 / 10000000 ( 10.81 % )
+Episode: 1850	 Latest 100 average score: 13.52	 Progress: 1090939 / 10000000 ( 10.91 % )
+Episode: 1860	 Latest 100 average score: 13.96	 Progress: 1104449 / 10000000 ( 11.04 % )
+Episode: 1870	 Latest 100 average score: 13.74	 Progress: 1115696 / 10000000 ( 11.16 % )
+Episode: 1880	 Latest 100 average score: 13.47	 Progress: 1125101 / 10000000 ( 11.25 % )
+Episode: 1890	 Latest 100 average score: 12.73	 Progress: 1135066 / 10000000 ( 11.35 % )
+Episode: 1900	 Latest 100 average score: 12.58	 Progress: 1145612 / 10000000 ( 11.46 % )
+Weights saving...Done!
+Scores on 5 trials:  [2.0, 3.0, 1.0, 3.0, 0.0]
+Highest score:  3.0
+Average score:  1.8
+Episode: 1910	 Latest 100 average score: 12.62	 Progress: 1156763 / 10000000 ( 11.57 % )
+Episode: 1920	 Latest 100 average score: 12.72	 Progress: 1167039 / 10000000 ( 11.67 % )
+Episode: 1930	 Latest 100 average score: 12.66	 Progress: 1178949 / 10000000 ( 11.79 % )
+Episode: 1940	 Latest 100 average score: 12.52	 Progress: 1188459 / 10000000 ( 11.88 % )
+Episode: 1950	 Latest 100 average score: 12.95	 Progress: 1199281 / 10000000 ( 11.99 % )
+Episode: 1960	 Latest 100 average score: 12.54	 Progress: 1208007 / 10000000 ( 12.08 % )
+Episode: 1970	 Latest 100 average score: 12.50	 Progress: 1220163 / 10000000 ( 12.20 % )
+Episode: 1980	 Latest 100 average score: 13.22	 Progress: 1232446 / 10000000 ( 12.32 % )
+Episode: 1990	 Latest 100 average score: 14.56	 Progress: 1251332 / 10000000 ( 12.51 % )
+Episode: 2000	 Latest 100 average score: 15.04	 Progress: 1265684 / 10000000 ( 12.66 % )
+Weights saving...Done!
+Scores on 5 trials:  [40.0, 5.0, 6.0, 27.0, 32.0]
+Highest score:  40.0
+Average score:  22.0
+Episode: 2010	 Latest 100 average score: 15.15	 Progress: 1274732 / 10000000 ( 12.75 % )
+Episode: 2020	 Latest 100 average score: 14.70	 Progress: 1281254 / 10000000 ( 12.81 % )
+Episode: 2030	 Latest 100 average score: 14.02	 Progress: 1290420 / 10000000 ( 12.90 % )
+Episode: 2040	 Latest 100 average score: 14.16	 Progress: 1300225 / 10000000 ( 13.00 % )
+Episode: 2050	 Latest 100 average score: 13.62	 Progress: 1308722 / 10000000 ( 13.09 % )
+Episode: 2060	 Latest 100 average score: 14.53	 Progress: 1327365 / 10000000 ( 13.27 % )
+Episode: 2070	 Latest 100 average score: 14.40	 Progress: 1338075 / 10000000 ( 13.38 % )
+Episode: 2080	 Latest 100 average score: 14.00	 Progress: 1349601 / 10000000 ( 13.50 % )
+Episode: 2090	 Latest 100 average score: 12.52	 Progress: 1358119 / 10000000 ( 13.58 % )
+Episode: 2100	 Latest 100 average score: 12.25	 Progress: 1371664 / 10000000 ( 13.72 % )
+Weights saving...Done!
+Scores on 5 trials:  [64.0, 15.0, 3.0, 9.0, 8.0]
+Highest score:  64.0
+Average score:  19.8
+Episode: 2110	 Latest 100 average score: 12.31	 Progress: 1379495 / 10000000 ( 13.79 % )
+Episode: 2120	 Latest 100 average score: 12.49	 Progress: 1387584 / 10000000 ( 13.88 % )
+Episode: 2130	 Latest 100 average score: 12.74	 Progress: 1398059 / 10000000 ( 13.98 % )
+Episode: 2140	 Latest 100 average score: 13.15	 Progress: 1410541 / 10000000 ( 14.11 % )
+Episode: 2150	 Latest 100 average score: 13.67	 Progress: 1420122 / 10000000 ( 14.20 % )
+Episode: 2160	 Latest 100 average score: 13.27	 Progress: 1432528 / 10000000 ( 14.33 % )
+Episode: 2170	 Latest 100 average score: 13.26	 Progress: 1442129 / 10000000 ( 14.42 % )
+Episode: 2180	 Latest 100 average score: 13.55	 Progress: 1452072 / 10000000 ( 14.52 % )
+Episode: 2190	 Latest 100 average score: 14.34	 Progress: 1465720 / 10000000 ( 14.66 % )
+Episode: 2200	 Latest 100 average score: 14.67	 Progress: 1478893 / 10000000 ( 14.79 % )
+Weights saving...Done!
+Scores on 5 trials:  [75.0, 10.0, 5.0, 15.0, 22.0]
+Highest score:  75.0
+Average score:  25.4
+Episode: 2210	 Latest 100 average score: 14.85	 Progress: 1489158 / 10000000 ( 14.89 % )
+Episode: 2220	 Latest 100 average score: 14.77	 Progress: 1497527 / 10000000 ( 14.98 % )
+Episode: 2230	 Latest 100 average score: 14.99	 Progress: 1509576 / 10000000 ( 15.10 % )
+Episode: 2240	 Latest 100 average score: 14.96	 Progress: 1522217 / 10000000 ( 15.22 % )
+Episode: 2250	 Latest 100 average score: 14.95	 Progress: 1533402 / 10000000 ( 15.33 % )
+Episode: 2260	 Latest 100 average score: 14.49	 Progress: 1542083 / 10000000 ( 15.42 % )
+Episode: 2270	 Latest 100 average score: 15.33	 Progress: 1558455 / 10000000 ( 15.58 % )
+Episode: 2280	 Latest 100 average score: 14.72	 Progress: 1566361 / 10000000 ( 15.66 % )
+Episode: 2290	 Latest 100 average score: 14.34	 Progress: 1578872 / 10000000 ( 15.79 % )
+Episode: 2300	 Latest 100 average score: 13.42	 Progress: 1587458 / 10000000 ( 15.87 % )
+Weights saving...Done!
+Scores on 5 trials:  [8.0, 7.0, 15.0, 14.0, 13.0]
+Highest score:  15.0
+Average score:  11.4
+Episode: 2310	 Latest 100 average score: 13.48	 Progress: 1598636 / 10000000 ( 15.99 % )
+Episode: 2320	 Latest 100 average score: 14.46	 Progress: 1614347 / 10000000 ( 16.14 % )
+Episode: 2330	 Latest 100 average score: 14.48	 Progress: 1626541 / 10000000 ( 16.27 % )
+Episode: 2340	 Latest 100 average score: 14.09	 Progress: 1636522 / 10000000 ( 16.37 % )
+Episode: 2350	 Latest 100 average score: 13.74	 Progress: 1645751 / 10000000 ( 16.46 % )
+Episode: 2360	 Latest 100 average score: 13.94	 Progress: 1658297 / 10000000 ( 16.58 % )
+Episode: 2370	 Latest 100 average score: 13.58	 Progress: 1671755 / 10000000 ( 16.72 % )
+Episode: 2380	 Latest 100 average score: 14.93	 Progress: 1686892 / 10000000 ( 16.87 % )
+Episode: 2390	 Latest 100 average score: 15.33	 Progress: 1698433 / 10000000 ( 16.98 % )
+Episode: 2400	 Latest 100 average score: 15.59	 Progress: 1708731 / 10000000 ( 17.09 % )
+Weights saving...Done!
+Scores on 5 trials:  [15.0, 30.0, 5.0, 6.0, 1.0]
+Highest score:  30.0
+Average score:  11.4
+Episode: 2410	 Latest 100 average score: 15.22	 Progress: 1717738 / 10000000 ( 17.18 % )
+Episode: 2420	 Latest 100 average score: 15.29	 Progress: 1732402 / 10000000 ( 17.32 % )
+Episode: 2430	 Latest 100 average score: 15.23	 Progress: 1742919 / 10000000 ( 17.43 % )
+Episode: 2440	 Latest 100 average score: 15.34	 Progress: 1753377 / 10000000 ( 17.53 % )
+Episode: 2450	 Latest 100 average score: 16.16	 Progress: 1766741 / 10000000 ( 17.67 % )
+Episode: 2460	 Latest 100 average score: 16.17	 Progress: 1777682 / 10000000 ( 17.78 % )
+Episode: 2470	 Latest 100 average score: 15.91	 Progress: 1790168 / 10000000 ( 17.90 % )
+Episode: 2480	 Latest 100 average score: 15.60	 Progress: 1804764 / 10000000 ( 18.05 % )
+Episode: 2490	 Latest 100 average score: 15.68	 Progress: 1820346 / 10000000 ( 18.20 % )
+Episode: 2500	 Latest 100 average score: 15.63	 Progress: 1829185 / 10000000 ( 18.29 % )
+Weights saving...Done!
+Scores on 5 trials:  [8.0, 30.0, 4.0, 13.0, 16.0]
+Highest score:  30.0
+Average score:  14.2
+Episode: 2510	 Latest 100 average score: 16.50	 Progress: 1842654 / 10000000 ( 18.43 % )
+Episode: 2520	 Latest 100 average score: 16.77	 Progress: 1857022 / 10000000 ( 18.57 % )
+Episode: 2530	 Latest 100 average score: 17.30	 Progress: 1870957 / 10000000 ( 18.71 % )
+Episode: 2540	 Latest 100 average score: 17.35	 Progress: 1882162 / 10000000 ( 18.82 % )
+Episode: 2550	 Latest 100 average score: 17.49	 Progress: 1896910 / 10000000 ( 18.97 % )
+Episode: 2560	 Latest 100 average score: 17.41	 Progress: 1906371 / 10000000 ( 19.06 % )
+Episode: 2570	 Latest 100 average score: 17.05	 Progress: 1915539 / 10000000 ( 19.16 % )
+Episode: 2580	 Latest 100 average score: 16.15	 Progress: 1924312 / 10000000 ( 19.24 % )
+Episode: 2590	 Latest 100 average score: 15.90	 Progress: 1935312 / 10000000 ( 19.35 % )
+Episode: 2600	 Latest 100 average score: 16.53	 Progress: 1947494 / 10000000 ( 19.47 % )
+Weights saving...Done!
+Scores on 5 trials:  [76.0, 3.0, 6.0, 42.0, 33.0]
+Highest score:  76.0
+Average score:  32.0
+Episode: 2610	 Latest 100 average score: 16.17	 Progress: 1958396 / 10000000 ( 19.58 % )
+Episode: 2620	 Latest 100 average score: 15.33	 Progress: 1967514 / 10000000 ( 19.68 % )
+Episode: 2630	 Latest 100 average score: 15.22	 Progress: 1981305 / 10000000 ( 19.81 % )
+Episode: 2640	 Latest 100 average score: 15.42	 Progress: 1993302 / 10000000 ( 19.93 % )
+Episode: 2650	 Latest 100 average score: 15.37	 Progress: 2007664 / 10000000 ( 20.08 % )
+Episode: 2660	 Latest 100 average score: 15.78	 Progress: 2019692 / 10000000 ( 20.20 % )
+Episode: 2670	 Latest 100 average score: 16.05	 Progress: 2028704 / 10000000 ( 20.29 % )
+Episode: 2680	 Latest 100 average score: 16.86	 Progress: 2042704 / 10000000 ( 20.43 % )
+Episode: 2690	 Latest 100 average score: 16.51	 Progress: 2052229 / 10000000 ( 20.52 % )
+Episode: 2700	 Latest 100 average score: 16.21	 Progress: 2061534 / 10000000 ( 20.62 % )
+Weights saving...Done!
+Scores on 5 trials:  [15.0, 15.0, 11.0, 14.0, 16.0]
+Highest score:  16.0
+Average score:  14.2
+Episode: 2710	 Latest 100 average score: 16.51	 Progress: 2074407 / 10000000 ( 20.74 % )
+Episode: 2720	 Latest 100 average score: 16.27	 Progress: 2083784 / 10000000 ( 20.84 % )
+Episode: 2730	 Latest 100 average score: 15.67	 Progress: 2094210 / 10000000 ( 20.94 % )
+Episode: 2740	 Latest 100 average score: 15.24	 Progress: 2102288 / 10000000 ( 21.02 % )
+Episode: 2750	 Latest 100 average score: 14.56	 Progress: 2112058 / 10000000 ( 21.12 % )
+Episode: 2760	 Latest 100 average score: 14.17	 Progress: 2122031 / 10000000 ( 21.22 % )
+Episode: 2770	 Latest 100 average score: 14.91	 Progress: 2135028 / 10000000 ( 21.35 % )
+Episode: 2780	 Latest 100 average score: 14.73	 Progress: 2146945 / 10000000 ( 21.47 % )
+Episode: 2790	 Latest 100 average score: 15.45	 Progress: 2160723 / 10000000 ( 21.61 % )
+Episode: 2800	 Latest 100 average score: 15.23	 Progress: 2172166 / 10000000 ( 21.72 % )
+Weights saving...Done!
+Scores on 5 trials:  [60.0, 12.0, 11.0, 21.0, 0.0]
+Highest score:  60.0
+Average score:  20.8
+Episode: 2810	 Latest 100 average score: 14.66	 Progress: 2181855 / 10000000 ( 21.82 % )
+Episode: 2820	 Latest 100 average score: 14.55	 Progress: 2189779 / 10000000 ( 21.90 % )
+Episode: 2830	 Latest 100 average score: 14.73	 Progress: 2199940 / 10000000 ( 22.00 % )
+Episode: 2840	 Latest 100 average score: 15.22	 Progress: 2210406 / 10000000 ( 22.10 % )
+Episode: 2850	 Latest 100 average score: 16.34	 Progress: 2226327 / 10000000 ( 22.26 % )
+Episode: 2860	 Latest 100 average score: 16.59	 Progress: 2237204 / 10000000 ( 22.37 % )
+Episode: 2870	 Latest 100 average score: 16.07	 Progress: 2248008 / 10000000 ( 22.48 % )
+Episode: 2880	 Latest 100 average score: 16.31	 Progress: 2261712 / 10000000 ( 22.62 % )
+Episode: 2890	 Latest 100 average score: 15.99	 Progress: 2274183 / 10000000 ( 22.74 % )
+Episode: 2900	 Latest 100 average score: 16.65	 Progress: 2287354 / 10000000 ( 22.87 % )
+Weights saving...Done!
+Scores on 5 trials:  [30.0, 14.0, 1.0, 29.0, 31.0]
+Highest score:  31.0
+Average score:  21.0
+Episode: 2910	 Latest 100 average score: 16.91	 Progress: 2298355 / 10000000 ( 22.98 % )
+Episode: 2920	 Latest 100 average score: 17.49	 Progress: 2310440 / 10000000 ( 23.10 % )
+Episode: 2930	 Latest 100 average score: 17.81	 Progress: 2322693 / 10000000 ( 23.23 % )
+Episode: 2940	 Latest 100 average score: 17.23	 Progress: 2330162 / 10000000 ( 23.30 % )
+Episode: 2950	 Latest 100 average score: 16.39	 Progress: 2343279 / 10000000 ( 23.43 % )
+Episode: 2960	 Latest 100 average score: 16.53	 Progress: 2355918 / 10000000 ( 23.56 % )
+Episode: 2970	 Latest 100 average score: 17.02	 Progress: 2369430 / 10000000 ( 23.69 % )
+Episode: 2980	 Latest 100 average score: 16.86	 Progress: 2381627 / 10000000 ( 23.82 % )
+Episode: 2990	 Latest 100 average score: 17.28	 Progress: 2395767 / 10000000 ( 23.96 % )
+Episode: 3000	 Latest 100 average score: 16.29	 Progress: 2403297 / 10000000 ( 24.03 % )
+Weights saving...Done!
+Scores on 5 trials:  [55.0, 21.0, 2.0, 0.0, 0.0]
+Highest score:  55.0
+Average score:  15.6
+Episode: 3010	 Latest 100 average score: 16.13	 Progress: 2414371 / 10000000 ( 24.14 % )
+Episode: 3020	 Latest 100 average score: 16.08	 Progress: 2426295 / 10000000 ( 24.26 % )
+Episode: 3030	 Latest 100 average score: 15.58	 Progress: 2436150 / 10000000 ( 24.36 % )
+Episode: 3040	 Latest 100 average score: 16.09	 Progress: 2448228 / 10000000 ( 24.48 % )
+Episode: 3050	 Latest 100 average score: 15.65	 Progress: 2457710 / 10000000 ( 24.58 % )
+Episode: 3060	 Latest 100 average score: 15.71	 Progress: 2470819 / 10000000 ( 24.71 % )
+Episode: 3070	 Latest 100 average score: 15.35	 Progress: 2481304 / 10000000 ( 24.81 % )
+Episode: 3080	 Latest 100 average score: 14.70	 Progress: 2490387 / 10000000 ( 24.90 % )
+Episode: 3090	 Latest 100 average score: 14.39	 Progress: 2501695 / 10000000 ( 25.02 % )
+Episode: 3100	 Latest 100 average score: 14.68	 Progress: 2510962 / 10000000 ( 25.11 % )
+Weights saving...Done!
+Scores on 5 trials:  [15.0, 25.0, 36.0, 30.0, 22.0]
+Highest score:  36.0
+Average score:  25.6
+Episode: 3110	 Latest 100 average score: 14.53	 Progress: 2521778 / 10000000 ( 25.22 % )
+Episode: 3120	 Latest 100 average score: 14.48	 Progress: 2533376 / 10000000 ( 25.33 % )
+Episode: 3130	 Latest 100 average score: 14.92	 Progress: 2546617 / 10000000 ( 25.47 % )
+Episode: 3140	 Latest 100 average score: 14.66	 Progress: 2557101 / 10000000 ( 25.57 % )
+Episode: 3150	 Latest 100 average score: 14.88	 Progress: 2567472 / 10000000 ( 25.67 % )
+Episode: 3160	 Latest 100 average score: 14.58	 Progress: 2577790 / 10000000 ( 25.78 % )
+Episode: 3170	 Latest 100 average score: 14.59	 Progress: 2588855 / 10000000 ( 25.89 % )
+Episode: 3180	 Latest 100 average score: 15.43	 Progress: 2603090 / 10000000 ( 26.03 % )
+Episode: 3190	 Latest 100 average score: 15.07	 Progress: 2613079 / 10000000 ( 26.13 % )
+Episode: 3200	 Latest 100 average score: 15.30	 Progress: 2624180 / 10000000 ( 26.24 % )
+Weights saving...Done!
+Scores on 5 trials:  [61.0, 12.0, 4.0, 28.0, 12.0]
+Highest score:  61.0
+Average score:  23.4
+Episode: 3210	 Latest 100 average score: 16.26	 Progress: 2640305 / 10000000 ( 26.40 % )
+Episode: 3220	 Latest 100 average score: 16.32	 Progress: 2650682 / 10000000 ( 26.51 % )
+Episode: 3230	 Latest 100 average score: 16.42	 Progress: 2662824 / 10000000 ( 26.63 % )
+Episode: 3240	 Latest 100 average score: 16.77	 Progress: 2673488 / 10000000 ( 26.73 % )
+Episode: 3250	 Latest 100 average score: 16.79	 Progress: 2682851 / 10000000 ( 26.83 % )
+Episode: 3260	 Latest 100 average score: 16.87	 Progress: 2694127 / 10000000 ( 26.94 % )
+Episode: 3270	 Latest 100 average score: 16.96	 Progress: 2705112 / 10000000 ( 27.05 % )
+Episode: 3280	 Latest 100 average score: 16.69	 Progress: 2716555 / 10000000 ( 27.17 % )
+Episode: 3290	 Latest 100 average score: 16.52	 Progress: 2725689 / 10000000 ( 27.26 % )
+Episode: 3300	 Latest 100 average score: 16.45	 Progress: 2737157 / 10000000 ( 27.37 % )
+Weights saving...Done!
+Scores on 5 trials:  [8.0, 28.0, 9.0, 31.0, 12.0]
+Highest score:  31.0
+Average score:  17.6
+Episode: 3310	 Latest 100 average score: 15.83	 Progress: 2748091 / 10000000 ( 27.48 % )
+Episode: 3320	 Latest 100 average score: 15.51	 Progress: 2756755 / 10000000 ( 27.57 % )
+Episode: 3330	 Latest 100 average score: 14.72	 Progress: 2764759 / 10000000 ( 27.65 % )
+Episode: 3340	 Latest 100 average score: 15.01	 Progress: 2776746 / 10000000 ( 27.77 % )
+Episode: 3350	 Latest 100 average score: 14.85	 Progress: 2784919 / 10000000 ( 27.85 % )
+Episode: 3360	 Latest 100 average score: 14.83	 Progress: 2796230 / 10000000 ( 27.96 % )
+Episode: 3370	 Latest 100 average score: 14.79	 Progress: 2809473 / 10000000 ( 28.09 % )
+Episode: 3380	 Latest 100 average score: 14.54	 Progress: 2819192 / 10000000 ( 28.19 % )
+Episode: 3390	 Latest 100 average score: 15.14	 Progress: 2830553 / 10000000 ( 28.31 % )
+Episode: 3400	 Latest 100 average score: 15.28	 Progress: 2841672 / 10000000 ( 28.42 % )
+Weights saving...Done!
+Killed. Scores on 5 trials:  [15.0, 30.0, 9.0, 8.0, 8.0]
+Highest score:  30.0
+Average score:  14.0
+Episode: 3410	 Latest 100 average score: 15.27	 Progress: 2852029 / 10000000 ( 28.52 % )
+Episode: 3420	 Latest 100 average score: 15.95	 Progress: 2865886 / 10000000 ( 28.66 % )
+Episode: 3430	 Latest 100 average score: 16.73	 Progress: 2878469 / 10000000 ( 28.78 % )
+Episode: 3440	 Latest 100 average score: 16.75	 Progress: 2891961 / 10000000 ( 28.92 % )
+Episode: 3450	 Latest 100 average score: 17.32	 Progress: 2904598 / 10000000 ( 29.05 % )
+Episode: 3460	 Latest 100 average score: 17.38	 Progress: 2915286 / 10000000 ( 29.15 % )
+Episode: 3470	 Latest 100 average score: 18.10	 Progress: 2930540 / 10000000 ( 29.31 % )
+Episode: 3480	 Latest 100 average score: 18.30	 Progress: 2941576 / 10000000 ( 29.42 % )
+Episode: 3490	 Latest 100 average score: 18.11	 Progress: 2953668 / 10000000 ( 29.54 % )
+Episode: 3500	 Latest 100 average score: 17.79	 Progress: 2963166 / 10000000 ( 29.63 % )
+Weights saving...Done!
+Scores on 5 trials:  [35.0, 47.0, 1.0, 15.0, 23.0]
+Highest score:  47.0
+Average score:  24.2
+Episode: 3510	 Latest 100 average score: 17.84	 Progress: 2974140 / 10000000 ( 29.74 % )
+Episode: 3520	 Latest 100 average score: 17.56	 Progress: 2986380 / 10000000 ( 29.86 % )
+Episode: 3530	 Latest 100 average score: 17.61	 Progress: 2998842 / 10000000 ( 29.99 % )
+Episode: 3540	 Latest 100 average score: 17.36	 Progress: 3010237 / 10000000 ( 30.10 % )
+Episode: 3550	 Latest 100 average score: 17.01	 Progress: 3020410 / 10000000 ( 30.20 % )
+Episode: 3560	 Latest 100 average score: 16.80	 Progress: 3029469 / 10000000 ( 30.29 % )
+Episode: 3570	 Latest 100 average score: 16.05	 Progress: 3040250 / 10000000 ( 30.40 % )
+Episode: 3580	 Latest 100 average score: 16.01	 Progress: 3049941 / 10000000 ( 30.50 % )
+Episode: 3590	 Latest 100 average score: 16.46	 Progress: 3062508 / 10000000 ( 30.63 % )
+Episode: 3600	 Latest 100 average score: 16.99	 Progress: 3073852 / 10000000 ( 30.74 % )
+Weights saving...Done!
+Scores on 5 trials:  [30.0, 3.0, 12.0, 6.0, 33.0]
+Highest score:  33.0
+Average score:  16.8
+Episode: 3610	 Latest 100 average score: 16.99	 Progress: 3084335 / 10000000 ( 30.84 % )
+Episode: 3620	 Latest 100 average score: 16.88	 Progress: 3096385 / 10000000 ( 30.96 % )
+Episode: 3630	 Latest 100 average score: 17.00	 Progress: 3109849 / 10000000 ( 31.10 % )
+Episode: 3640	 Latest 100 average score: 17.20	 Progress: 3123202 / 10000000 ( 31.23 % )
+Episode: 3650	 Latest 100 average score: 17.19	 Progress: 3132486 / 10000000 ( 31.32 % )
+Episode: 3660	 Latest 100 average score: 17.91	 Progress: 3146904 / 10000000 ( 31.47 % )
+Episode: 3670	 Latest 100 average score: 17.44	 Progress: 3154979 / 10000000 ( 31.55 % )
+Episode: 3680	 Latest 100 average score: 16.90	 Progress: 3163648 / 10000000 ( 31.64 % )
+Episode: 3690	 Latest 100 average score: 16.77	 Progress: 3175371 / 10000000 ( 31.75 % )
+Episode: 3700	 Latest 100 average score: 16.84	 Progress: 3186567 / 10000000 ( 31.87 % )
+Weights saving...Done!
+Scores on 5 trials:  [2.0, 12.0, 11.0, 6.0, 57.0]
+Highest score:  57.0
+Average score:  17.6
+Episode: 3710	 Latest 100 average score: 16.33	 Progress: 3195056 / 10000000 ( 31.95 % )
+Episode: 3720	 Latest 100 average score: 16.81	 Progress: 3210053 / 10000000 ( 32.10 % )
+Episode: 3730	 Latest 100 average score: 16.42	 Progress: 3221095 / 10000000 ( 32.21 % )
+Episode: 3740	 Latest 100 average score: 15.89	 Progress: 3230255 / 10000000 ( 32.30 % )
+Episode: 3750	 Latest 100 average score: 16.00	 Progress: 3241329 / 10000000 ( 32.41 % )
+Episode: 3760	 Latest 100 average score: 15.19	 Progress: 3251750 / 10000000 ( 32.52 % )
+Episode: 3770	 Latest 100 average score: 15.59	 Progress: 3264485 / 10000000 ( 32.64 % )
+Episode: 3780	 Latest 100 average score: 16.04	 Progress: 3275289 / 10000000 ( 32.75 % )
+Episode: 3790	 Latest 100 average score: 15.96	 Progress: 3287242 / 10000000 ( 32.87 % )
+Episode: 3800	 Latest 100 average score: 15.30	 Progress: 3296231 / 10000000 ( 32.96 % )
+Weights saving...Done!
+Scores on 5 trials:  [37.0, 24.0, 29.0, 33.0, 5.0]
+Highest score:  37.0
+Average score:  25.6
+Episode: 3810	 Latest 100 average score: 16.01	 Progress: 3308545 / 10000000 ( 33.09 % )
+Episode: 3820	 Latest 100 average score: 15.32	 Progress: 3317299 / 10000000 ( 33.17 % )
+Episode: 3830	 Latest 100 average score: 15.29	 Progress: 3328057 / 10000000 ( 33.28 % )
+Episode: 3840	 Latest 100 average score: 15.77	 Progress: 3339447 / 10000000 ( 33.39 % )
+Episode: 3850	 Latest 100 average score: 15.58	 Progress: 3348015 / 10000000 ( 33.48 % )
+Episode: 3860	 Latest 100 average score: 15.48	 Progress: 3356567 / 10000000 ( 33.57 % )
+Episode: 3870	 Latest 100 average score: 15.64	 Progress: 3366918 / 10000000 ( 33.67 % )
+Episode: 3880	 Latest 100 average score: 15.47	 Progress: 3376979 / 10000000 ( 33.77 % )
+Episode: 3890	 Latest 100 average score: 15.96	 Progress: 3391817 / 10000000 ( 33.92 % )
+Episode: 3900	 Latest 100 average score: 16.48	 Progress: 3402717 / 10000000 ( 34.03 % )
+Weights saving...Done!
+Scores on 5 trials:  [8.0, 4.0, 3.0, 54.0, 1.0]
+Highest score:  54.0
+Average score:  14.0
+Episode: 3910	 Latest 100 average score: 16.06	 Progress: 3413227 / 10000000 ( 34.13 % )
+Episode: 3920	 Latest 100 average score: 16.15	 Progress: 3422887 / 10000000 ( 34.23 % )
+Episode: 3930	 Latest 100 average score: 16.38	 Progress: 3435966 / 10000000 ( 34.36 % )
+Episode: 3940	 Latest 100 average score: 16.04	 Progress: 3446136 / 10000000 ( 34.46 % )
+Episode: 3950	 Latest 100 average score: 16.18	 Progress: 3455836 / 10000000 ( 34.56 % )
+Episode: 3960	 Latest 100 average score: 17.06	 Progress: 3468747 / 10000000 ( 34.69 % )
+Episode: 3970	 Latest 100 average score: 16.94	 Progress: 3478786 / 10000000 ( 34.79 % )
+Episode: 3980	 Latest 100 average score: 16.49	 Progress: 3485898 / 10000000 ( 34.86 % )
+Episode: 3990	 Latest 100 average score: 16.11	 Progress: 3498708 / 10000000 ( 34.99 % )
+Episode: 4000	 Latest 100 average score: 16.08	 Progress: 3508816 / 10000000 ( 35.09 % )
+Weights saving...Done!
+Scores on 5 trials:  [57.0, 22.0, 13.0, 43.0, 2.0]
+Highest score:  57.0
+Average score:  27.4
+Episode: 4010	 Latest 100 average score: 16.25	 Progress: 3519895 / 10000000 ( 35.20 % )
+Episode: 4020	 Latest 100 average score: 16.29	 Progress: 3529489 / 10000000 ( 35.29 % )
+Episode: 4030	 Latest 100 average score: 16.15	 Progress: 3540632 / 10000000 ( 35.41 % )
+Episode: 4040	 Latest 100 average score: 16.53	 Progress: 3552921 / 10000000 ( 35.53 % )
+Episode: 4050	 Latest 100 average score: 16.79	 Progress: 3564318 / 10000000 ( 35.64 % )
+Episode: 4060	 Latest 100 average score: 16.75	 Progress: 3578257 / 10000000 ( 35.78 % )
+Episode: 4070	 Latest 100 average score: 16.59	 Progress: 3588528 / 10000000 ( 35.89 % )
+Episode: 4080	 Latest 100 average score: 17.34	 Progress: 3599925 / 10000000 ( 36.00 % )
+Episode: 4090	 Latest 100 average score: 17.23	 Progress: 3612832 / 10000000 ( 36.13 % )
+Episode: 4100	 Latest 100 average score: 16.53	 Progress: 3620839 / 10000000 ( 36.21 % )
+Weights saving...Done!
+Scores on 5 trials:  [45.0, 38.0, 8.0, 38.0, 31.0]
+Highest score:  45.0
+Average score:  32.0

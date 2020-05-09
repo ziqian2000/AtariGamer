@@ -8,15 +8,15 @@ Unsupported for life game.
 
 ## Achievement
 
-### DQN
+### Double DQN with prioritized replay memory
 
-5 trials.
+20 trials.
 
-| Game       | Max   |  Average |
-| --------   | ----  | -------- |
-| Pong       | 21 | 20.8 |   
-| Krull      |  |  |
-| Tutankham  |  |  |
-| Atlantis   |  |  |
-| Freeway    | 32 | 31.6 |
-| Beam Rider |  |  |
+| Game       | Archives | Max   |  Average | Goal|
+| --------   | -------- | ----  | -------- | -------- |
+| Pong       | 20200503_004655 |21.0   | 20.65   |20|
+| Krull      | 20200504_133140 |3366.0 | 2786.4 |3000|
+| Tutankham  | 20200503_094208 |267.0 | 77.9 |100|
+| Atlantis   | - |- | - |750000|
+| Freeway    | 20200429_053559 |32.0   | 31.8    |30|
+| Beam Rider | 20200506_235504 |13070.0 | 4552.3 |10000|

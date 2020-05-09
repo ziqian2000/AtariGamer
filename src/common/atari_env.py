@@ -9,9 +9,9 @@ def process(state):
 
 class AtariEnvironment:
 
-    def __init__(self, env_id, total_frames_limit):
+    def __init__(self, env_id, total_frames_limit, clip=True):
         self.env = make_atari(env_id)
-        self.env = wrap_deepmind(self.env, frame_stack=True)
+        self.env = wrap_deepmind(self.env, frame_stack=True, clip_rewards=clip)
         self.env = wrap_pytorch(self.env)
         self.total_frames_limit = total_frames_limit
         self.total_frames_passed = 0
