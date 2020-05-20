@@ -31,10 +31,10 @@ class Agent:
         self.training_frames = int(1e7)
         self.learning_rate = 0.00025
         self.momentum = 0.95
-        self.frameSkip = 4
+        self.frame_skip = 4
 
         # frames limit
-        self.fps = 30
+        self.fps = 60
         self.max_playing_time = 5  # minutes
         self.total_frames_limit = self.fps * 60 * self.max_playing_time
 
@@ -56,7 +56,7 @@ class Agent:
         self.main_network = Network(action_num=self.action_num, history_len=self.history_len)
         self.target_network = Network(action_num=self.action_num, history_len=self.history_len)
         # self.optimizer = Adam(lr=self.learning_rate, epsilon=1e-6)
-        self.optimizer = RMSprop(learning_rate=self.learning_rate, momentum=self.momentum, epsilon=1e-6)
+        self.optimizer = RMSprop(learning_rate=self.learning_rate, momentum=self.momentum, epsilon=1e-2)
         self.loss = tf.keras.losses.Huber()
         self.loss_metric = tf.keras.metrics.Mean()
         self.q_metric = tf.keras.metrics.Mean()
@@ -64,7 +64,7 @@ class Agent:
         # other tools (log, summary)
         self.log_path = ("drive/My Drive/AtariGamer/" if not debug else "./") + "log/" + datetime.now().strftime("%Y%m%d_%H%M%S") + "_" + self.env_id
 
-        print("DDQN:" + ("YES" if self.use_DDQN else "NO"))
+        print("- DDQN:", ("YES" if self.use_DDQN else "NO"))
 
     @tf.function
     def get_action(self, state, exploration_rate):
@@ -193,7 +193,7 @@ class Agent:
 
             while not terminated:
 
-                if frames % self.frameSkip == 0:
+                if frames % self.frame_skip == 0:
                     action = last_action
                 else:
                     explr = self.get_explr(tf.constant(frames, dtype=tf.float32))
@@ -245,7 +245,7 @@ class Agent:
             loaded_checkpoints = tf.train.latest_checkpoint(load_path)
             self.main_network.load_weights(loaded_checkpoints)
 
-        env = AtariEnvironment(self.env_id, self.total_frames_limit, clip=False)
+        env = AtariEnvironment(self.env_id, self.total_frames_limit, clip_rewards=False, episode_life=False)
         reward_list = []
         frame_list = []
 
