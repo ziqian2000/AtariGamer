@@ -1,23 +1,38 @@
 # Atari Gamer
 
-## Attention
+Maybe later I will upload my project report so that more infos will be available.
 
-Unsupported for life game.
+As for now, a simple readme suffices.
 
-*NoFrameskip* environment only.
+## How to run
 
-## Achievement
+<del>Try it yourself.</del>
 
-### Double DQN with prioritized replay memory
+I will explain it later.
 
-30 trials.
+## Features
 
-| Game       | Archives | Max   |  Average | Goal|
-| --------   | -------- | ----  | -------- | -------- |
-| Pong       | 20200503_004655 | 20.0    | 20.0    |**20**|
-| Krull      | 20200519_015529 | 9684.0 | 8830.4 |**8500**|
-| Tutankham | 20200519_120229 | 351.0 | 262.7 |**230**|
-| Atlantis   | 20200513_071206 |2734600.0 | 2303165.0 |**750000**|
-| Freeway    | 20200429_053559 | 32.0    | 31.6    |**30**|
-| Beam Rider | 20200506_235504 | 35380.0 | 13557.4 |**11000**|
+Stay tuned.
 
+## Structure
+
+Also stay tuned.
+
+## Result
+
+On 30 trials. 
+
+| Game       |  Max   |  Average |
+| --------   | -------- | ----  | -------- |
+| Pong       | 20.0    | 20.0    |
+| Krull      | 9684.0 | 8830.4 |
+| Tutankham | 351.0 | 262.7 |
+| Atlantis   |2734600.0 | 2303165.0 |
+| Freeway    | 32.0    | 31.6    |
+| Beam Rider | 35380.0 | 13557.4 |
+
+## Gallery
+
+There will be some GIFs here. But too lazy to generate. 
+
+Yes, stay tuned.

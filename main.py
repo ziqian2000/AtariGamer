@@ -17,7 +17,7 @@ def args_parse():
 
     # mode -- choose 1 from 4
     parser.add_argument("--train", action="store_true", help="Train on a given environment.")
-    parser.add_argument("--cont_train", help="Continue to train a given model.")
+    parser.add_argument("--cont_train", help="Continue to train a given agent.")
     parser.add_argument("--play", help="Play on a given environment. Followed by save path.")
 
     return parser.parse_args()
