@@ -1,38 +1,39 @@
 # Atari Gamer
 
-Maybe later I will upload my project report so that more infos will be available.
+Atari Gamer is a naive AI that can play Atari games. 
 
-As for now, a simple readme suffices.
+It is a course project of *Machine Learning*  @ ACM Class, SJTU.
+
+For more details about this project, please read the report.
 
 ## How to run
 
-<del>Try it yourself.</del>
+If you know nothing about it, just run
 
-I will explain it later.
+```shell
+$ python --help
+```
 
-## Features
+For a quick start, assuming you have 5 GiB GPU memory and you want to let it learn to play *Pong* from scratch, please run
 
-Stay tuned.
+```shell
+$ python main.py --env PongNoFrameskip-v4 --mem 5 --train
+```
 
-## Structure
+However, if the training was suspended for some reasons and you want to continue, run
 
-Also stay tuned.
+```shell
+$ python main.py --env PongNoFrameskip-v4 --mem 5 --cont_train FILE_PATH
+```
 
-## Result
+The `FILE_PATH` should be replaced by the file path of your agent.
 
-On 30 trials. 
+If you are eager to see your agent playing *Pong*, run
 
-| Game       |  Max   |  Average |
-| --------   | -------- | ----  |
-| Pong       | 20.0    | 20.0    |
-| Krull      | 9684.0 | 8830.4 |
-| Tutankham | 351.0 | 262.7 |
-| Atlantis   |2734600.0 | 2303165.0 |
-| Freeway    | 32.0    | 31.6    |
-| Beam Rider | 35380.0 | 13557.4 |
+```shell
+$ python main.py --env PongNoFrameskip-v4 --play FILE_PATH
+```
 
 ## Gallery
 
-There will be some GIFs here. But too lazy to generate. 
-
-Yes, stay tuned.
+![Pong](./asset/PongNoFrameskip-v4.gif)![BeamRider](./asset/BeamRiderNoFrameskip-v4.gif)![Tutankham](./asset/TutankhamNoFrameskip-v4.gif)![Krull](./asset/KrullNoFrameskip-v4.gif)![Freeway](./asset/FreewayNoFrameskip-v4.gif)
